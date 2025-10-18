@@ -40,7 +40,6 @@ class MainApp extends StatelessWidget {
             Expanded(
               child: 
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     // Круглый аватар с изображением из сети 
                     CircleAvatar(radius: 90, backgroundImage: NetworkImage('https://flutter.github.io/assets-for-api-docs/assets/widgets/owl.jpg'),),
