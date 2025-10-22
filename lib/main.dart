@@ -9,7 +9,7 @@ class MainApp extends StatelessWidget {
 
   // Обработчик нажатия на кнопку
   void _onPressed() {
-      print('Button pressed!');
+      // print('Button pressed!');
   }
 
   @override
@@ -17,6 +17,7 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       // Главный экран приложения
       home: Scaffold(
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         // Плавающая кнопка действия с обработчиком нажатия
         floatingActionButton: FloatingActionButton(onPressed: _onPressed, 
         backgroundColor: Colors.pink[100],),
@@ -47,6 +48,55 @@ class MainApp extends StatelessWidget {
                     CircleAvatar(radius: 50, backgroundColor: Colors.yellow[400])
                     ],
                 )
+              ),
+              SingleChildScrollView(
+              physics: const AlwaysScrollableScrollPhysics(),
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset('assets/images/first.jpg', width: 200, height: 200, fit: BoxFit.cover),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/second.jpg', width: 200, height: 200, fit: BoxFit.cover),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/3.jpg', width: 200, height: 200, fit: BoxFit.cover),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/four.jpg', width: 200, height: 200, fit: BoxFit.cover),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/five.jpg', width: 200, height: 200, fit: BoxFit.cover),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/six.jpg', width: 200, height: 200, fit: BoxFit.cover),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/seven.jpg', width: 200, height: 200, fit: BoxFit.cover),
+                      SizedBox(width: 50),
+                      Image.asset('assets/images/8.jpg', width: 200, height: 200, fit: BoxFit.cover)
+                    ],
+                  ),
+              ),
+              SizedBox(height: 100),
+              Container(
+                width: 280,
+                height: 200,
+                margin: EdgeInsets.only(bottom: 70),
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 255, 0, 200),
+                  borderRadius: BorderRadius.circular(40),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromARGB(255, 255, 0, 200).withValues(alpha: 0.8), 
+                      blurRadius: 80, 
+                      spreadRadius: 5, 
+                      offset: Offset(0, 0), 
+                    ),
+                  ],
+                  border: Border.all(
+                    color: Colors.white.withValues(alpha: 0.3),
+                    width: 3,
+                  ),
+                ),
+                child: Center(
+                  child:  Text('NEON', style: TextStyle( fontWeight: FontWeight.bold, fontSize: 20, fontFamily: 'Michroma'), )
+                ),
               )
             ],
           ),
